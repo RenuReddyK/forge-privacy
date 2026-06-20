@@ -4,499 +4,423 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Forge — Privacy Policy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg:        #F6F0E9;
-      --surface:   #FFFFFF;
-      --green:     #4A6B44;
-      --dark:      #1A2B1A;
-      --rose:      #BC8DA0;
-      --mint:      #E8F5D0;
-      --muted:     #7A8F7A;
-      --border:    rgba(74,107,68,0.12);
+      --paper:    #FBFAF7;
+      --surface:  #FFFFFF;
+      --ink:      #1B271B;
+      --ink-soft: #44503F;
+      --muted:    #8C948A;
+      --accent:   #2D5A27;
+      --line:     rgba(27,39,27,0.12);
+      --line-soft:rgba(27,39,27,0.07);
+      --note:     #F3F1EA;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
-      background: var(--bg);
-      color: var(--dark);
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 300;
-      line-height: 1.75;
-      min-height: 100vh;
+      background: var(--paper);
+      color: var(--ink-soft);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* ── HEADER ── */
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 32px; }
+
+    /* ── MASTHEAD ── */
     header {
-      background: var(--dark);
-      padding: 48px 24px 40px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+      padding: 72px 0 36px;
     }
-
-    header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 30% 50%, rgba(74,107,68,0.3) 0%, transparent 60%),
-                  radial-gradient(ellipse at 70% 50%, rgba(188,141,160,0.15) 0%, transparent 60%);
-      pointer-events: none;
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 18px;
     }
-
-    .header-inner { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; }
-
-    .app-icon {
-      width: 64px;
-      height: 64px;
-      background: var(--green);
-      border-radius: 16px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      margin-bottom: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-    }
-
     header h1 {
       font-family: 'Lora', serif;
-      font-size: clamp(28px, 5vw, 38px);
+      font-size: 40px;
       font-weight: 600;
-      color: #F6F0E9;
-      letter-spacing: -0.02em;
-      margin-bottom: 6px;
+      color: var(--ink);
+      letter-spacing: -0.015em;
+      line-height: 1.1;
+      margin-bottom: 16px;
     }
-
-    header p {
-      font-size: 14px;
-      color: rgba(232,245,208,0.6);
-      font-weight: 300;
-    }
-
-    /* ── MAIN ── */
-    main {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 48px 24px 80px;
-    }
-
-    /* ── INTRO CARD ── */
-    .intro {
-      background: var(--surface);
-      border-radius: 16px;
-      padding: 28px 32px;
-      margin-bottom: 40px;
-      border: 1px solid var(--border);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .intro::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--green), var(--rose));
-    }
-
-    .intro p {
-      font-size: 15px;
-      color: var(--dark);
-      line-height: 1.8;
-    }
-
-    .intro p + p { margin-top: 12px; }
-
-    .intro strong { font-weight: 500; color: var(--green); }
-
-    /* ── LAST UPDATED ── */
-    .meta {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 12px;
+    .effective {
+      font-size: 13px;
       color: var(--muted);
-      margin-bottom: 40px;
-      padding-left: 4px;
     }
 
-    .meta-dot {
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: var(--green);
-      flex-shrink: 0;
+    main { padding: 48px 0 24px; }
+
+    /* ── INTRO ── */
+    .lede {
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--ink);
+      margin-bottom: 16px;
     }
+    .lede + .lede { font-size: 15px; color: var(--ink-soft); }
+    .intro-block { margin-bottom: 56px; }
+
+    /* ── TABLE OF CONTENTS ── */
+    .toc {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 28px 0;
+      margin-bottom: 56px;
+    }
+    .toc-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .toc ol {
+      list-style: none;
+      columns: 2;
+      column-gap: 40px;
+    }
+    .toc li { margin-bottom: 9px; break-inside: avoid; }
+    .toc a {
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 14px;
+      display: flex;
+      gap: 12px;
+      transition: color 0.15s;
+    }
+    .toc a:hover { color: var(--accent); }
+    .toc .num { color: var(--muted); font-variant-numeric: tabular-nums; min-width: 18px; }
 
     /* ── SECTIONS ── */
-    section { margin-bottom: 36px; }
-
+    section { margin-bottom: 52px; }
     section h2 {
       font-family: 'Lora', serif;
-      font-size: 20px;
+      font-size: 23px;
       font-weight: 600;
-      color: var(--dark);
-      margin-bottom: 14px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--border);
+      color: var(--ink);
+      letter-spacing: -0.01em;
+      margin-bottom: 18px;
+      padding-bottom: 0;
       display: flex;
-      align-items: center;
-      gap: 10px;
+      align-items: baseline;
+      gap: 14px;
     }
-
-    .section-icon {
-      width: 28px; height: 28px;
-      background: var(--mint);
-      border-radius: 7px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+    section h2 .num {
+      font-family: 'Inter', sans-serif;
       font-size: 13px;
-      flex-shrink: 0;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      font-variant-numeric: tabular-nums;
+      transform: translateY(-2px);
     }
-
-    section p {
-      font-size: 14px;
-      color: #3A4A3A;
-      line-height: 1.8;
-      margin-bottom: 10px;
-    }
-
+    section p { margin-bottom: 14px; color: var(--ink-soft); }
     section p:last-child { margin-bottom: 0; }
+    section p strong { font-weight: 600; color: var(--ink); }
+    section p em { font-style: italic; }
 
-    /* ── DATA TABLE ── */
+    .sub {
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* ── TABLE ── */
     .data-table {
       width: 100%;
       border-collapse: collapse;
-      margin: 16px 0;
-      font-size: 13px;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid var(--border);
+      margin: 22px 0 8px;
+      font-size: 13.5px;
     }
-
-    .data-table thead tr {
-      background: var(--dark);
-    }
-
     .data-table thead th {
-      padding: 10px 14px;
       text-align: left;
-      font-weight: 500;
       font-size: 11px;
-      letter-spacing: 0.05em;
+      font-weight: 600;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--mint);
+      color: var(--muted);
+      padding: 0 16px 12px 0;
+      border-bottom: 1px solid var(--line);
     }
-
-    .data-table tbody tr:nth-child(even) { background: rgba(74,107,68,0.04); }
-    .data-table tbody tr:nth-child(odd) { background: #fff; }
-
-    .data-table tbody tr:last-child td:first-child { border-radius: 0 0 0 12px; }
-    .data-table tbody tr:last-child td:last-child { border-radius: 0 0 12px 0; }
-
+    .data-table thead th:last-child { padding-right: 0; text-align: right; }
     .data-table td {
-      padding: 10px 14px;
-      border-bottom: 1px solid var(--border);
-      color: var(--dark);
+      padding: 14px 16px 14px 0;
+      border-bottom: 1px solid var(--line-soft);
       vertical-align: top;
-      line-height: 1.6;
+      color: var(--ink-soft);
+      line-height: 1.5;
     }
-
+    .data-table td:first-child { font-weight: 500; color: var(--ink); width: 31%; }
+    .data-table td:last-child { padding-right: 0; text-align: right; white-space: nowrap; }
     .data-table tbody tr:last-child td { border-bottom: none; }
 
-    .data-table td:first-child { font-weight: 500; color: var(--green); white-space: nowrap; }
-
-    .tag {
+    .label {
       display: inline-block;
-      font-size: 10px;
+      font-size: 11px;
       font-weight: 500;
-      padding: 2px 7px;
-      border-radius: 20px;
-      margin-left: 6px;
-      vertical-align: middle;
+      letter-spacing: 0.02em;
+      padding: 3px 10px;
+      border-radius: 4px;
+      border: 1px solid var(--line);
+      color: var(--ink-soft);
+      white-space: nowrap;
     }
-
-    .tag-local { background: var(--mint); color: var(--green); }
-    .tag-cloud { background: #EDE8F5; color: #6B5B8A; }
-    .tag-never { background: #FEE2E2; color: #B91C1C; }
+    .label-accent { border-color: rgba(45,90,39,0.30); color: var(--accent); }
 
     /* ── NEVER LIST ── */
-    .never-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin: 14px 0;
-    }
-
+    .never-list { list-style: none; margin: 18px 0 4px; }
     .never-list li {
       display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 14px;
-      color: #3A4A3A;
-      line-height: 1.6;
+      align-items: baseline;
+      gap: 12px;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--line-soft);
+      font-size: 14.5px;
+      color: var(--ink-soft);
     }
-
-    .never-icon {
-      width: 20px; height: 20px;
-      background: #FEE2E2;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 10px;
+    .never-list li:last-child { border-bottom: none; }
+    .never-list .x {
+      color: var(--accent);
+      font-weight: 600;
       flex-shrink: 0;
-      margin-top: 2px;
+      transform: translateY(1px);
     }
 
-    /* ── HIGHLIGHT BOX ── */
-    .highlight {
-      background: var(--mint);
-      border-radius: 12px;
-      padding: 16px 20px;
-      margin: 16px 0;
-      border-left: 3px solid var(--green);
+    /* ── NOTE ── */
+    .note {
+      background: var(--note);
+      border-left: 2px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+      padding: 16px 22px;
+      margin: 22px 0;
     }
-
-    .highlight p {
-      font-size: 13px;
-      color: var(--dark);
-      margin: 0;
-      line-height: 1.7;
-    }
-
-    .highlight strong { font-weight: 500; }
+    .note p { font-size: 14px; color: var(--ink); margin: 0; line-height: 1.65; }
+    .note p strong { font-weight: 600; }
 
     /* ── CONTACT ── */
-    .contact-card {
-      background: var(--dark);
-      border-radius: 16px;
-      padding: 28px 32px;
-      margin-top: 48px;
+    .contact {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 32px;
+      margin-top: 64px;
       text-align: center;
-      position: relative;
-      overflow: hidden;
     }
-
-    .contact-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at center, rgba(74,107,68,0.25) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .contact-card h2 {
+    .contact h2 {
       font-family: 'Lora', serif;
-      font-size: 20px;
-      color: #F6F0E9;
+      font-size: 21px;
+      font-weight: 600;
+      color: var(--ink);
       margin-bottom: 8px;
-      border: none;
-      padding: 0;
-      position: relative;
     }
-
-    .contact-card p {
-      font-size: 13px;
-      color: rgba(232,245,208,0.6);
-      margin-bottom: 16px;
-      position: relative;
-    }
-
-    .contact-card a {
+    .contact p { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
+    .contact a {
       display: inline-block;
-      background: var(--green);
-      color: var(--mint);
       text-decoration: none;
-      font-size: 13px;
+      color: var(--accent);
       font-weight: 500;
-      padding: 10px 24px;
+      font-size: 14px;
+      padding: 10px 26px;
+      border: 1px solid rgba(45,90,39,0.35);
       border-radius: 24px;
-      position: relative;
-      transition: opacity 0.2s;
+      transition: background 0.15s;
     }
-
-    .contact-card a:hover { opacity: 0.85; }
+    .contact a:hover { background: rgba(45,90,39,0.06); }
 
     /* ── FOOTER ── */
     footer {
-      text-align: center;
-      padding: 24px;
-      font-size: 12px;
+      border-top: 1px solid var(--line);
+      margin-top: 64px;
+      padding: 28px 0 64px;
+      font-size: 12.5px;
       color: var(--muted);
-      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
     }
+    footer .brand { color: var(--ink); font-weight: 600; letter-spacing: 0.04em; }
 
-    footer span { color: var(--green); }
-
-    @media (max-width: 480px) {
-      main { padding: 32px 16px 60px; }
-      .intro { padding: 20px; }
-      .data-table { font-size: 12px; }
-      .data-table td, .data-table th { padding: 8px 10px; }
+    @media (max-width: 560px) {
+      .wrap { padding: 0 22px; }
+      header { padding: 52px 0 28px; }
+      header h1 { font-size: 32px; }
+      .toc ol { columns: 1; }
+      .data-table td:first-child { width: auto; }
+      .data-table, .data-table thead { font-size: 12.5px; }
+      footer { flex-direction: column; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="header-inner">
-    <div class="app-icon">⚒️</div>
-    <h1>Forge — Privacy Policy</h1>
-    <p>Build habits that stick. One day at a time.</p>
+  <div class="wrap">
+    <div class="eyebrow">Forge</div>
+    <h1>Privacy Policy</h1>
+    <div class="effective">Effective June 2026 &nbsp;·&nbsp; Version 1.0</div>
   </div>
 </header>
 
-<main>
+<main class="wrap">
 
-  <div class="meta">
-    <div class="meta-dot"></div>
-    Last updated: May 2026
+  <div class="intro-block">
+    <p class="lede">Forge is built on a single principle: your data is yours. Almost everything you create in Forge — your goals, check-ins, photos, and notes — stays on your device and in your own private iCloud. We do not sell your data, we do not show advertising, and we never share your information with third-party advertisers or analytics companies.</p>
+    <p class="lede">The only data that ever leaves your device is anonymous, aggregate research data — never your photos, notes, or anything that identifies you. This policy explains, in plain terms, what we collect, why, and where it goes.</p>
   </div>
 
-  <div class="intro">
-    <p>Forge is built on one principle: <strong>your data is yours.</strong> We collect the minimum information needed to make the app work and help us build a better product. We don't sell your data. We don't show you ads. We don't share your information with third parties.</p>
-    <p>This policy explains exactly what we collect, why we collect it, and where it goes.</p>
-  </div>
+  <nav class="toc">
+    <div class="toc-label">Contents</div>
+    <ol>
+      <li><a href="#collect"><span class="num">01</span><span>What We Collect</span></a></li>
+      <li><a href="#never"><span class="num">02</span><span>What We Never Collect</span></a></li>
+      <li><a href="#analytics"><span class="num">03</span><span>Anonymous Analytics</span></a></li>
+      <li><a href="#icloud"><span class="num">04</span><span>iCloud Sync</span></a></li>
+      <li><a href="#children"><span class="num">05</span><span>Children&#x2019;s Privacy</span></a></li>
+      <li><a href="#delete"><span class="num">06</span><span>Deleting Your Data</span></a></li>
+      <li><a href="#rights"><span class="num">07</span><span>Your Rights</span></a></li>
+      <li><a href="#changes"><span class="num">08</span><span>Changes to This Policy</span></a></li>
+    </ol>
+  </nav>
 
-  <section>
-    <h2><span class="section-icon">📦</span> What We Collect</h2>
-    <p>Forge collects two categories of data: information that stays on your device, and anonymous analytics sent to help us understand how people use the app.</p>
+  <section id="collect">
+    <h2><span class="num">01</span> What We Collect</h2>
+    <p>Forge handles three kinds of data: personal information that stays in your control, on your device and in your personal iCloud; anonymous usage data that describes what happens in the app but not who you are; and optional demographic data you may choose to share.</p>
 
     <table class="data-table">
       <thead>
-        <tr>
-          <th>Data</th>
-          <th>Why</th>
-          <th>Where</th>
-        </tr>
+        <tr><th>Data</th><th>Purpose</th><th>Where it lives</th></tr>
       </thead>
       <tbody>
         <tr>
           <td>Goal names, types, durations</td>
           <td>Core app function — tracking your habits</td>
-          <td><span class="tag tag-local">On device</span></td>
+          <td><span class="label">Device &amp; iCloud</span></td>
         </tr>
         <tr>
           <td>Check-in dates</td>
-          <td>Streak calculation and Wall of Proof</td>
-          <td><span class="tag tag-local">On device</span></td>
+          <td>Streak calculation and the Wall of Proof</td>
+          <td><span class="label">Device &amp; iCloud</span></td>
         </tr>
         <tr>
           <td>Check-in photos &amp; notes</td>
           <td>Building your personal habit album</td>
-          <td><span class="tag tag-local">On device</span></td>
-        </tr>
-        <tr>
-          <td>Streak &amp; completion data</td>
-          <td>Progress tracking and analytics</td>
-          <td><span class="tag tag-local">On device</span> <span class="tag tag-cloud">Analytics</span></td>
+          <td><span class="label">Device &amp; iCloud</span></td>
         </tr>
         <tr>
           <td>Name (optional)</td>
-          <td>Personalised greeting only</td>
-          <td><span class="tag tag-local">On device only</span></td>
+          <td>Personalised in-app greeting only</td>
+          <td><span class="label">Device only</span></td>
         </tr>
         <tr>
-          <td>Age range (optional)</td>
-          <td>Aggregate habit trend research</td>
-          <td><span class="tag tag-cloud">Analytics</span></td>
+          <td>Goal outcome snapshot</td>
+          <td>Aggregate research — what happens in the app</td>
+          <td><span class="label label-accent">Anonymous · always on</span></td>
         </tr>
         <tr>
-          <td>Gender (optional)</td>
-          <td>Aggregate habit trend research</td>
-          <td><span class="tag tag-cloud">Analytics</span></td>
+          <td>Age range &amp; gender</td>
+          <td>Grouping aggregate trends by cohort — only if you opt in</td>
+          <td><span class="label label-accent">Anonymous · opt-in</span></td>
         </tr>
         <tr>
-          <td>Anonymous device ID</td>
-          <td>Linking analytics events without identifying you</td>
-          <td><span class="tag tag-cloud">Analytics</span></td>
-        </tr>
-        <tr>
-          <td>App version</td>
-          <td>Understanding which version events come from</td>
-          <td><span class="tag tag-cloud">Analytics</span></td>
-        </tr>
-        <tr>
-          <td>Device locale (country only)</td>
-          <td>Geographic distribution of users</td>
-          <td><span class="tag tag-cloud">Analytics</span></td>
+          <td>App version &amp; country</td>
+          <td>Understanding which build and region trends come from</td>
+          <td><span class="label label-accent">Anonymous · always on</span></td>
         </tr>
       </tbody>
     </table>
 
-    <div class="highlight">
-      <p><strong>Your name never leaves your device.</strong> It's only used for the "Good morning, [name]" greeting inside the app. It is never included in analytics.</p>
+    <div class="note">
+      <p><strong>Your name, photos, and notes never leave your device for analytics.</strong> Your name is used only for the in-app greeting. Photos and notes are never transmitted anywhere except your own private iCloud, which only you can access.</p>
     </div>
   </section>
 
-  <section>
-    <h2><span class="section-icon">🔒</span> What We Never Collect</h2>
+  <section id="never">
+    <h2><span class="num">02</span> What We Never Collect</h2>
     <ul class="never-list">
-      <li><span class="never-icon">✕</span> Your email address or phone number</li>
-      <li><span class="never-icon">✕</span> Your location or GPS data</li>
-      <li><span class="never-icon">✕</span> Your contacts or address book</li>
-      <li><span class="never-icon">✕</span> Your full camera roll — photos are only accessed when you explicitly choose one</li>
-      <li><span class="never-icon">✕</span> Anything sold to advertisers or third parties</li>
-      <li><span class="never-icon">✕</span> Any data that could identify you personally</li>
+      <li><span class="x">&#x2715;</span><span>Your email address or phone number</span></li>
+      <li><span class="x">&#x2715;</span><span>Your location or GPS data — we use only your country, derived from your device locale</span></li>
+      <li><span class="x">&#x2715;</span><span>Your contacts or address book</span></li>
+      <li><span class="x">&#x2715;</span><span>Your camera roll — photos are accessed only when you explicitly choose one</span></li>
+      <li><span class="x">&#x2715;</span><span>Any account, login, email, or persistent identifier that ties analytics to you</span></li>
+      <li><span class="x">&#x2715;</span><span>Anything sold or shared with advertisers or third parties</span></li>
     </ul>
   </section>
 
-  <section>
-    <h2><span class="section-icon">📡</span> Analytics</h2>
-    <p>We send anonymous, aggregate analytics to CloudKit — Apple's own cloud infrastructure — to understand how people use Forge. This helps us answer questions like: which habits are most popular, at what point do people tend to stop, and do certain demographics have higher completion rates.</p>
-    <p>Every analytics event is tagged with a randomly-generated anonymous ID (a UUID stored in your device's secure Keychain). This ID has no connection to your name, email, or identity. It simply lets us understand user journeys without knowing whose journey it is.</p>
+  <section id="analytics">
+    <h2><span class="num">03</span> Anonymous Analytics</h2>
+    <p>To understand how people build habits — which goals are most popular, where people tend to stop, and how often freezes and pauses are used — Forge sends anonymous, aggregate research data. It comes in two tiers, which are treated differently by design.</p>
 
-    <div class="highlight">
-      <p><strong>Analytics are stored in CloudKit's public database</strong> — Apple's infrastructure, subject to Apple's privacy standards. We never run our own server. Your data never passes through third-party analytics platforms like Firebase, Mixpanel, or Amplitude.</p>
+    <p><span class="sub">Usage data — always on.</span></p>
+    <p>When a goal ends, Forge sends a single snapshot describing <em>what happened</em>, never <em>who you are</em>: the goal type (a category, never a name you typed), its length, the outcome (completed, failed, or ended early), how far you progressed, and how many freezes and paused days were used — together with your app version and country. Because this describes events rather than people, contains no identifier, and includes nothing personal, it forms part of how the app works and is sent for all users.</p>
+
+    <p><span class="sub">Demographics — opt-in, off by default.</span></p>
+    <p>Your age range and gender are the only data that describe <em>you</em> rather than your activity, so they are never sent unless you choose to share them. This setting is off by default. If you enable it in Settings, your age range and gender are attached to the usage snapshot so that trends can be grouped by cohort; if you leave it off, the snapshot is still sent without them and they never leave your device. You may turn it off again at any time.</p>
+
+    <div class="note">
+      <p><strong>There is no identifier of any kind, in either tier.</strong> Snapshots carry no name, account, email, or device or user ID — not even a random one. Because nothing links one snapshot to another, your records cannot be assembled into a profile or traced back to you, by us or anyone else.</p>
+    </div>
+
+    <p>To guarantee anonymity in practice, Forge reports a statistic for a group only once that group contains enough people that no single individual can be singled out. Any group below that threshold is never displayed, so a result is always about a crowd, never about a person. Free text you enter — such as a custom goal name — and exact dates are never transmitted.</p>
+
+    <div class="note">
+      <p><strong>Analytics are stored in CloudKit&#x2019;s public database</strong> — Apple&#x2019;s own infrastructure, governed by Apple&#x2019;s privacy standards. We do not operate our own server, we do not keep private copies or backups of analytics data, and your data never passes through third-party platforms such as Firebase, Mixpanel, or Amplitude.</p>
     </div>
   </section>
 
-  <section>
-    <h2><span class="section-icon">☁️</span> iCloud Sync</h2>
-    <p>Forge uses CloudKit to sync your habit data across your devices and ensure it survives if you reinstall the app. Your data is stored in your personal iCloud account — we cannot access it. Apple's iCloud privacy policy applies.</p>
-    <p>iCloud sync is tied to your Apple ID. If you sign out of iCloud, your data remains on your device but will no longer sync.</p>
+  <section id="icloud">
+    <h2><span class="num">04</span> iCloud Sync</h2>
+    <p>Forge uses CloudKit to sync your habit data — goals, check-ins, photos, and notes — across your devices, and to ensure it survives if you reinstall the app. This data is stored in <strong>your personal iCloud account</strong>, which only you can access. We cannot see it, and we never copy or back it up. Apple&#x2019;s iCloud privacy policy applies.</p>
+    <p>iCloud sync is tied to your Apple ID. If you sign out of iCloud, your data remains on your device but no longer syncs. This personal sync is entirely separate from the anonymous analytics described above.</p>
   </section>
 
-  <section>
-    <h2><span class="section-icon">🧒</span> Children's Privacy</h2>
-    <p>Forge is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided us with information, please contact us and we will delete it immediately.</p>
-    <p>Users who indicate they are under 18 during optional demographic collection are treated with additional care — their data is excluded from any aggregate reporting.</p>
+  <section id="children">
+    <h2><span class="num">05</span> Children&#x2019;s Privacy</h2>
+    <p>Forge is not directed at children under 13, and we do not knowingly collect personal information from them. If you believe a child under 13 has provided us with information, please contact us and we will delete it immediately.</p>
+    <p>If a user indicates they are under 18, Forge transmits no analytics for that user whatsoever — no snapshot, no demographics, nothing leaves the device. We exclude minors from collection entirely, rather than collecting and filtering afterward.</p>
   </section>
 
-  <section>
-    <h2><span class="section-icon">🗑️</span> Deleting Your Data</h2>
-    <p>You can delete all your data at any time from within the app: Settings → Reset Everything. This removes all goals, check-ins, and profile information from your device and from iCloud.</p>
-    <p>Anonymous analytics events that have already been sent cannot be recalled — they contain no identifying information and cannot be linked back to you.</p>
+  <section id="delete">
+    <h2><span class="num">06</span> Deleting Your Data</h2>
+    <p>You can delete all your data at any time from Settings &#x2192; Reset Everything. This removes every goal, check-in, photo, and profile detail from your device and from your iCloud.</p>
+    <p>Anonymous analytics snapshots that have already been sent cannot be recalled, because they contain no identifier — there is no way, for you, for us, or for anyone, to determine which snapshots were yours.</p>
   </section>
 
-  <section>
-    <h2><span class="section-icon">📋</span> Your Rights</h2>
-    <p>Depending on where you live, you may have rights regarding your personal data including the right to access, correct, or delete it. Since Forge stores almost everything locally on your device, you already have direct control over most of your data.</p>
-    <p>For any data-related requests, contact us at the address below and we'll respond within 30 days.</p>
+  <section id="rights">
+    <h2><span class="num">07</span> Your Rights</h2>
+    <p>Depending on where you live, you may have rights to access, correct, or delete your personal data. Because Forge keeps your personal data on your own device and in your own iCloud, you already have direct control over it. The analytics carry no identifier of any kind, so even where they include opted-in demographics they cannot be linked back to you or singled out — there is nothing we could retrieve or erase on a per-person basis. You can stop demographic collection at any time in Settings.</p>
+    <p>For any data-related question, contact us at the address below and we will respond within 30 days.</p>
   </section>
 
-  <section>
-    <h2><span class="section-icon">🔄</span> Changes to This Policy</h2>
-    <p>If we make meaningful changes to this policy, we'll update the date at the top of this page and notify users within the app. Continued use of Forge after changes constitutes acceptance of the updated policy.</p>
+  <section id="changes">
+    <h2><span class="num">08</span> Changes to This Policy</h2>
+    <p>If we make meaningful changes to this policy, we will update the date at the top of this page and notify you within the app. If a change expands what analytics collect, we will ask for your consent again rather than assume it.</p>
   </section>
 
-  <div class="contact-card">
-    <h2>Questions?</h2>
-    <p>We're happy to answer anything about how Forge handles your data.</p>
+  <div class="contact">
+    <h2>Questions</h2>
+    <p>We&#x2019;re glad to answer anything about how Forge handles your data.</p>
     <a href="mailto:privacy@forge-app.com">privacy@forge-app.com</a>
   </div>
 
 </main>
 
-<footer>
-  <p>⚒️ <span>Forge</span> · Privacy Policy · May 2026 · All data stays on device.</p>
+<footer class="wrap">
+  <span><span class="brand">Forge</span> — Privacy Policy</span>
+  <span>Effective June 2026 · Your data stays in your control.</span>
 </footer>
 
 </body>
